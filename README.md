@@ -99,3 +99,34 @@ public class Main {
         }
     }
 }
+ 1st --> import java.util.*; 
+class Student {
+private String name; 
+private int roll; 
+private double gpa;
+public Student(String name, int roll, double gpa) { 
+this.name = name;
+this.roll = roll; 
+this.gpa = gpa;
+}
+// getters and setters
+public String getName() { return name; } 
+public int getRoll() { return roll; }
+public double getGpa() { return gpa; }
+public void setGpa(double gpa) { this.gpa = gpa; }
+public void display() {
+System.out.printf("Name: %s, Roll: %d, GPA: %.2f%n", name, roll, gpa);
+}
+}
+public class Exp01_ClassesObjects { 
+public static void main(String[] args) {
+Student s1 = new Student("Yash", 101, 8.7); 
+Student s2 = new Student("Abhiman", 102, 
+9.0); s1.display();
+s2.display();
+// modify via setter 
+s1.setGpa(9.1);
+System.out.println("After update:"); 
+s1.display();
+}
+}
