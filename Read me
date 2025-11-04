@@ -1,0 +1,54 @@
+// Exp01_ClassesObjects - Simple Example of Class and Object
+class Student {
+    private String name;
+    private int roll;
+    private double gpa;
+
+    // Constructor
+    public Student(String name, int roll, double gpa) {
+        this.name = name;
+        this.roll = roll;
+        this.gpa = gpa;
+    }
+
+    // Getter methods
+    public String getName() {
+        return name;
+    }
+
+    public int getRoll() {
+        return roll;
+    }
+
+    public double getGpa() {
+        return gpa;
+    }
+
+    // Setter method
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
+    }
+
+    // Display method
+    public void display() {
+        System.out.printf("Name: %s, Roll: %d, GPA: %.2f%n", name, roll, gpa);
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        // Creating objects
+        Student s1 = new Student("Yash", 101, 8.7);
+        Student s2 = new Student("Abhiman", 102, 9.0);
+
+        // Display initial data
+        s1.display();
+        s2.display();
+
+        // Modify data using setter
+        s1.setGpa(9.1);
+        System.out.println("After updating GPA:");
+        s1.display();
+    }
+}
